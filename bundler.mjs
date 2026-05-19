@@ -475,7 +475,7 @@ function generatePreamble(runtimeLibPathLua, robloxTreeLua) {
 function assert(condition, messageIfFalse)
 \tif not condition then error(messageIfFalse or _VERSION .. " assertion error") end
 end
-local _VERSION = _VERSION.." {deadline-ts PRE-RELEASE}"
+local _VERSION = create_instance and _VERSION.." {deadline-ts PRE-RELEASE}" or _VERSION
 local unpack = table.unpack
 local old_require = require
 local __modulesFolder = {}
