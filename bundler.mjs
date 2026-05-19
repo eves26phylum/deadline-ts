@@ -435,9 +435,19 @@ function generateModuleWrapper({ filePath, segments }) {
 function generateStandaloneWrapper({ filePath, segments }) {
     const raw = fs.readFileSync(filePath, 'utf8');
     const segsLua = segments.map(s => `"${escLua(s)}"`).join(', ');
-
     const prologueLua =
         `\tlocal __modulesFolder = nil\n` +
+        `\tlocal __customTS = nil\n` +
+        `\tlocal getRobloxInstancePath = nil\n` +
+        `\tlocal matchesRuntimeLibPath = nil\n` +
+        `\tlocal resolveModuleRelativeSegs = nil\n` +
+        `\tlocal __robloxTree = nil\n` +
+        `\tlocal __OUTPUT_DIR_MAKER = nil\n` +
+        `\tlocal __runtimeLibPath = nil\n` +
+        `\tlocal __modulesCachedValues = nil\n` +
+        `\tlocal old_require = nil\n` +
+        `\tlocal newFakeInstance = nil\n` +
+        `\tlocal old_game = nil\n` +
         `\tlocal script\n` +
         `\tscript = newFakeInstance({${segsLua}})`;
 
