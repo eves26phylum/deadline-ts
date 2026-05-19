@@ -413,10 +413,10 @@ function generateModuleWrapper({ filePath, segments }) {
         `\tlocal __runtimeLibPath = nil\n` +
         `\tlocal __modulesCachedValues = nil\n` +
         `\tlocal old_require = nil\n` +
-        `\tlocal newFakeInstance = nil\n` +
         `\tlocal old_game = nil\n` +
         `\tlocal script\n` +
-        `\tscript = newFakeInstance({${segsLua}})`;
+        `\tscript = newFakeInstance({${segsLua}})` +
+        `\tlocal newFakeInstance = nil\n`;
 
     return (
         `__modulesFolder${bracketPath} = function()\n` +
@@ -446,10 +446,10 @@ function generateStandaloneWrapper({ filePath, segments }) {
         `\tlocal __runtimeLibPath = nil\n` +
         `\tlocal __modulesCachedValues = nil\n` +
         `\tlocal old_require = nil\n` +
-        `\tlocal newFakeInstance = nil\n` +
         `\tlocal old_game = nil\n` +
         `\tlocal script\n` +
-        `\tscript = newFakeInstance({${segsLua}})`;
+        `\tscript = newFakeInstance({${segsLua}})` +
+        `\tlocal newFakeInstance = nil\n`;
 
     return (
         `task.defer(function()\n` +
