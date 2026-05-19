@@ -11,5 +11,9 @@
   },
   "bin": {
     "deadline-dog": "./bundler.mjs"
-  }
+  },
+  "dependencies": {
+    "deadline-ts-types": "^1.0.0" 
+  },
+  "types": "deadline-ts-types"
 }
