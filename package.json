@@ -1,6 +1,6 @@
 {
   "name": "deadline-ts",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "",
   "license": "Apache-2.0",
   "author": "eves26phylum",
@@ -15,5 +15,10 @@
   "dependencies": {
     "deadline-ts-types": "^1.0.0" 
   },
-  "types": "deadline-ts-types"
+  "exports": {
+    ".": {
+      "types": "./types/global.d.ts",
+      "default": "./index.js"
+    }
+  }
 }
