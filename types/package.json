@@ -1,0 +1,12 @@
+{
+  "name": "types",
+  "version": "1.0.0",
+  "description": "Deadline's Types",
+  "license": "Apache-2.0",
+  "author": "eves26phylum",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
