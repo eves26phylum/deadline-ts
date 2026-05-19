@@ -1,10 +1,13 @@
 # deadline-ts
 How to setup:
-Use npm init roblox-ts.
+Use 
+`npm init roblox-ts` (if you haven't)
+`npm i @eves26phylum/types`
+`npm i deadline-ts`
 
 Then add
 ```json
-`{
+{
 	"include": [
 		"src/**/*",
 		"node_modules/@eves26phylum/types/global.d.ts"
